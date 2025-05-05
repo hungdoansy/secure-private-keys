@@ -1,0 +1,13 @@
+/node_modules
+
+/out
+/dist
+
+# production
+/build
+
+# pnpm
+pnpm-lock.yaml
+
+# npm
+package-lock.json

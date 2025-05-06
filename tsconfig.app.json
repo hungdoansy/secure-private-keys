@@ -24,7 +24,10 @@
         "paths": {
             "@/*": ["./src/*"],
             "react": ["./node_modules/@types/react"]
-        }
+        },
+
+        /* Testing */
+        "types": ["vitest", "@testing-library/jest-dom"]
     },
     "include": ["src"]
 }

@@ -28,12 +28,12 @@ module.exports = {
                 project,
             },
             node: {
-                extensions: [".mjs", ".js", ".jsx", ".ts", ".tsx"],
+                extensions: [".cjs", ".mjs", ".js", ".jsx", ".ts", ".tsx"],
             },
         },
     },
     ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js", "postcss.config.js", "**/*.css"],
-    plugins: ["react-hooks", "unused-imports"],
+    plugins: ["react-hooks", "unused-imports", "import"],
     // add rules configurations here
     rules: {
         "unused-imports/no-unused-imports": "error",
@@ -105,7 +105,7 @@ module.exports = {
         ],
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/prefer-as-const": "off",
-        "no-duplicate-imports": "error",
+        "import/no-duplicates": ["error", { "prefer-inline": true }],
         "@typescript-eslint/switch-exhaustiveness-check": "error",
     },
     overrides: [

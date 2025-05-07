@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+# Secure Private Keys
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application built with React, TypeScript, and Vite for secure private key management. This project provides a user-friendly interface for managing and securing private keys with advanced encryption features.
 
-Currently, two official plugins are available:
+## Tech Stack
 
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Framework**: React 18 with TypeScript
+-   **Build Tool**: Vite 6
+-   **Styling**: Tailwind CSS
+-   **Testing**: Vitest + React Testing Library
+-   **Code Quality**: ESLint + Prettier
+-   **Package Manager**: pnpm
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   Node.js ^18
+-   pnpm ^9
 
-```js
-export default tseslint.config({
-    extends: [
-        // Remove ...tseslint.configs.recommended and replace with this
-        ...tseslint.configs.recommendedTypeChecked,
-        // Alternatively, use this for stricter rules
-        ...tseslint.configs.strictTypeChecked,
-        // Optionally, add this for stylistic rules
-        ...tseslint.configs.stylisticTypeChecked,
-    ],
-    languageOptions: {
-        // other options...
-        parserOptions: {
-            project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-            tsconfigRootDir: import.meta.dirname,
-        },
-    },
-})
+## Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone git@github.com:hungdoansy/secure-private-keys.git
+cd secure-private-keys
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactDom from "eslint-plugin-react-dom"
-import reactX from "eslint-plugin-react-x"
+```bash
+pnpm install
+```
 
-export default tseslint.config({
-    plugins: {
-        // Add the react-x and react-dom plugins
-        "react-x": reactX,
-        "react-dom": reactDom,
-    },
-    rules: {
-        // other rules...
-        // Enable its recommended typescript rules
-        ...reactX.configs["recommended-typescript"].rules,
-        ...reactDom.configs.recommended.rules,
-    },
-})
+3. Start the development server:
+
+```bash
+pnpm dev
+```
+
+## Available Scripts
+
+-   `pnpm dev` - Start development server
+-   `pnpm build` - Build for production
+-   `pnpm preview` - Preview production build
+-   `pnpm test` - Run tests
+-   `pnpm test:watch` - Run tests in watch mode
+-   `pnpm lint` - Run ESLint
+-   `pnpm lint:fix` - Fix ESLint issues
+-   `pnpm format` - Check code formatting
+-   `pnpm format:fix` - Fix code formatting
+
+## Project Structure
+
+```
+├── src/             # Source files
+├── public/          # Public assets
+├── dist/            # Build output
+└── [config files]   # Configuration files
 ```
